@@ -33,14 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Buffs\BoneBolt.cs" />
+    <Compile Include="Items\Ammo\BoneBolt.cs" />
+    <Compile Include="Items\Armor\FossilLeggings.cs" />
+    <Compile Include="Items\Armor\FossilPlatemail.cs" />
+    <Compile Include="Items\Armor\FossilMask.cs" />
     <Compile Include="Items\Armor\MoltenJacket.cs" />
     <Compile Include="Items\Armor\MoltenHelm.cs" />
     <Compile Include="Items\Armor\MoltenLeggings.cs" />
     <Compile Include="Items\Armor\GhillieJacket.cs" />
     <Compile Include="Items\Armor\GhillieHood.cs" />
     <Compile Include="Items\Armor\GhilliePants.cs" />
+    <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
     <Compile Include="Items\Weapons\MoltenSniper.cs" />
     <Compile Include="Items\Weapons\ScopedRifle.cs" />
+    <Compile Include="NPCs\WolfsGlobalNPC.cs" />
+    <Compile Include="Projectiles\BoneBoltProjectile.cs" />
     <Compile Include="SniperExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +69,7 @@
       <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
     </Reference>
     <Reference Include="ReLogicWindows">
-      <HintPath>..\..\..\..\..\..\Desktop\Terraria Decomp\ReLogicWindows.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Desktop\Modding\Terraria\Terraria Decomp\ReLogicWindows.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
