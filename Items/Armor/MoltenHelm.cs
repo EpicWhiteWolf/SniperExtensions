@@ -36,8 +36,8 @@ namespace SniperExtensions.Items.Armor
 
 		public override void UpdateArmorSet(Player player)
 		{
-            player.setBonus = "20% increased ranged damage" + "\nImmunity to fire";
-            player.rangedDamage *= 1.2f;
+            player.setBonus = "25% increased ranged damage" + "\nImmunity to fire";
+            player.rangedDamage *= 1.25f;
             player.buffImmune[BuffID.OnFire] = true;
         }
 
