@@ -25,7 +25,7 @@ namespace SniperExtensions.NPCs
 
         public override void SetDefaults(NPC npc)
         {
-            npc.buffImmune[mod.BuffType<Buffs.BoneBolt>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[mod.BuffType<Buffs.BoneBoltDebuff>()] = npc.buffImmune[BuffID.BoneJavelin];
         }
 
         public override void UpdateLifeRegen(NPC npc, ref int damage)

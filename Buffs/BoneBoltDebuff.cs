@@ -4,11 +4,11 @@ using SniperExtensions.NPCs;
 
 namespace SniperExtensions.Buffs
 {
-    class BoneBolt : ModBuff
+    class BoneBoltDebuff : ModBuff
     {
         public override bool Autoload(ref string name, ref string texture)
         {
-            texture = "SniperExtensions/Buffs/DebuffTemplate";
+            texture = "SniperExtensions/Buffs/BoneBoltDebuff";
             return base.Autoload(ref name, ref texture);
         }
 

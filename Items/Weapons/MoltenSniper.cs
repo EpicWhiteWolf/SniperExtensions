@@ -25,7 +25,7 @@ namespace SniperExtensions.Items.Weapons
             item.noMelee = true;
             item.knockBack = 7;
             item.value = Item.buyPrice(0, 5, 0, 0);
-            item.rare = 0;
+            item.rare = 3;
             item.UseSound = SoundID.Item14;
             item.autoReuse = false;
             item.shoot = 10;

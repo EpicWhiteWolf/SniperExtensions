@@ -1,21 +1,20 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SniperExtensions.Items.Weapons
 {
-    public class ScopedRifle : ModItem
+    class ShadowThorn : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Scoped Rifle");
-            Tooltip.SetDefault("Not Scilenced!");
+            DisplayName.SetDefault("Shadow Thorn");
         }
 
         public override void SetDefaults()
         {
-            item.damage = 20;
+            item.damage = 25;
             item.ranged = true;
             item.width = 74;
             item.height = 20;
@@ -37,9 +36,10 @@ namespace SniperExtensions.Items.Weapons
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddRecipeGroup("IronBar", 5);
+            recipe.AddIngredient(ItemID.DemoniteBar, 12);
             recipe.AddIngredient(ItemID.Glass, 2);
-            recipe.AddRecipeGroup("Wood", 4);
+            recipe.AddIngredient(ItemID.ShadowScale, 6);
+            recipe.AddIngredient(ItemID.BorealWood, 4);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
@@ -52,6 +52,10 @@ namespace SniperExtensions.Items.Weapons
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
+            if (type == ProjectileID.Bullet)
+            {
+                type = mod.ProjectileType("ShadowThornProjectile");
+            }
             Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
             speedX *= 1.2f;
             speedY *= 1.2f;

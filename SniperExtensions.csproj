@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Buffs\BoneBolt.cs" />
+    <Compile Include="Buffs\BoneBoltDebuff.cs" />
     <Compile Include="Items\Ammo\BoneBolt.cs" />
     <Compile Include="Items\Armor\FossilLeggings.cs" />
     <Compile Include="Items\Armor\FossilPlatemail.cs" />
@@ -47,8 +47,10 @@
     <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
     <Compile Include="Items\Weapons\MoltenSniper.cs" />
     <Compile Include="Items\Weapons\ScopedRifle.cs" />
+    <Compile Include="Items\Weapons\ShadowThorn.cs" />
     <Compile Include="NPCs\WolfsGlobalNPC.cs" />
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
+    <Compile Include="Projectiles\ShadowThornProjectile.cs" />
     <Compile Include="SniperExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +77,9 @@
     <Reference Include="Terraria">
       <HintPath>..\..\..\..\..\..\Desktop\Terraria\Modded\Terraria.exe</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dusts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

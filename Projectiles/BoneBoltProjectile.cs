@@ -24,11 +24,12 @@ namespace SniperExtensions.Projectiles
             projectile.ignoreWater = true;
             projectile.ranged = true;
             projectile.aiStyle = 0;
+            projectile.hide = true;
         }
         
         public override void DrawBehind(int index, List<int> drawCacheProjsBehindNPCsAndTiles, List<int> drawCacheProjsBehindNPCs, List<int> drawCacheProjsBehindProjectiles, List<int> drawCacheProjsOverWiresUI)
         {
-            if (projectile.ai[0] == 1f)
+            if (isStickingToTarget)
             {
                 int npcIndex = (int)projectile.ai[1];
                 if (npcIndex >= 0 && npcIndex < 200 && Main.npc[npcIndex].active)
@@ -84,7 +85,7 @@ namespace SniperExtensions.Projectiles
             targetWhoAmI = (float)target.whoAmI;
             projectile.velocity = (target.Center - projectile.Center) * 0.75f;
             projectile.netUpdate = true;
-            target.AddBuff(mod.BuffType<Buffs.BoneBolt>(), 960);
+            target.AddBuff(mod.BuffType<Buffs.BoneBoltDebuff>(), 960);
             projectile.damage = 0;
             int maxStickingBolts = 15;
             Point[] stickingBolts = new Point[maxStickingBolts];
@@ -126,15 +127,6 @@ namespace SniperExtensions.Projectiles
         {
             if (!isStickingToTarget)
             {
-                targetWhoAmI += 1f;
-                if (targetWhoAmI >= maxTicks)
-                {
-                    float velXmult = 0.98f;
-                    float velYmult = 0.35f;
-                    targetWhoAmI = maxTicks;
-                    projectile.velocity.X = projectile.velocity.X * velXmult;
-                    projectile.velocity.Y = projectile.velocity.Y + velYmult;
-                }
                 projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
             }
             if (isStickingToTarget)
