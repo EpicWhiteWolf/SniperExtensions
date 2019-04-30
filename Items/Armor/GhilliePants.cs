@@ -19,7 +19,7 @@ namespace SniperExtensions.Items.Armor
 		{
 			item.width = 18;
 			item.height = 18;
-			item.value = Item.buyPrice(0, 0, 1, 0);
+			item.value = Item.sellPrice(0, 0, 16, 0);
             item.rare = 1;
 			item.defense = 1;
 		}
@@ -32,9 +32,8 @@ namespace SniperExtensions.Items.Armor
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Wood, 4);
-            recipe.AddIngredient(ItemID.Hay, 4);
-            recipe.AddIngredient(ItemID.Cobweb, 4);
+            recipe.AddIngredient(ItemID.Silk, 8);
+            recipe.AddIngredient(ItemID.GrassWall, 8);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);
             recipe.AddRecipe();
