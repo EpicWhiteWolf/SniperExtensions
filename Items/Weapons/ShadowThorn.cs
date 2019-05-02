@@ -15,7 +15,7 @@ namespace SniperExtensions.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 25;
+            item.damage = 40;
             item.ranged = true;
             item.width = 74;
             item.height = 20;
