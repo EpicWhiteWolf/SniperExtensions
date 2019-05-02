@@ -44,7 +44,7 @@ namespace SniperExtensions.Items.Armor
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Silk, 7);
-            recipe.AddIngredient(ItemID.GrassWall, 8);
+            recipe.AddIngredient(ItemID.LivingLeafWall, 8);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);
             recipe.AddRecipe();
