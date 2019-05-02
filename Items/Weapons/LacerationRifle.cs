@@ -1,21 +1,22 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
+
 namespace SniperExtensions.Items.Weapons
 {
-    public class MoltenSniper : ModItem
+    class LacerationRifle : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Molten Sniper");
-            Tooltip.SetDefault("Big bada boom.");
+            DisplayName.SetDefault("Laceration Rifle");
+            Tooltip.SetDefault("Strip the flesh!" + "\nSalt the wound!");
         }
 
         public override void SetDefaults()
         {
-            item.damage = 85;
+            item.damage = 45;
             item.ranged = true;
             item.width = 74;
             item.height = 20;
@@ -31,18 +32,6 @@ namespace SniperExtensions.Items.Weapons
             item.shoot = 10;
             item.shootSpeed = 16f;
             item.useAmmo = AmmoID.Bullet;
-            item.crit = 21;
-        }
-
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddRecipeGroup("IronBar", 5);
-            recipe.AddIngredient(ItemID.Glass, 2);
-            recipe.AddIngredient(ItemID.HellstoneBar, 15);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
         }
 
         public override Vector2? HoldoutOffset()
@@ -54,12 +43,12 @@ namespace SniperExtensions.Items.Weapons
         {
             if (type == ProjectileID.Bullet)
             {
-                type = ProjectileID.ExplosiveBullet;
+                type = mod.ProjectileType("LacerationProjectile");
             }
             Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
-            speedX *= 1.5f;
-            speedY *= 1.5f;
-            muzzleOffset.Y += -4;
+            speedX *= 1.2f;
+            speedY *= 1.2f;
+            muzzleOffset.Y += -6;
             position += muzzleOffset;
             return true;
         }

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Buffs\BoneBoltDebuff.cs" />
+    <Compile Include="Buffs\LacerationsDebuff.cs" />
     <Compile Include="Items\Ammo\BoneBolt.cs" />
     <Compile Include="Items\Armor\FossilLeggings.cs" />
     <Compile Include="Items\Armor\FossilPlatemail.cs" />
@@ -45,11 +46,13 @@
     <Compile Include="Items\Armor\GhillieHood.cs" />
     <Compile Include="Items\Armor\GhilliePants.cs" />
     <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
+    <Compile Include="Items\Weapons\LacerationRifle.cs" />
     <Compile Include="Items\Weapons\MoltenSniper.cs" />
     <Compile Include="Items\Weapons\ScopedRifle.cs" />
     <Compile Include="Items\Weapons\ShadowThorn.cs" />
     <Compile Include="NPCs\WolfsGlobalNPC.cs" />
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
+    <Compile Include="Projectiles\LacerationProjectile.cs" />
     <Compile Include="Projectiles\ShadowThornProjectile.cs" />
     <Compile Include="SniperExtensions.cs" />
   </ItemGroup>

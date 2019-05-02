@@ -16,7 +16,7 @@ namespace SniperExtensions.Projectiles
             projectile.Name = "Bone Bolt";
             projectile.width = 16;
             projectile.height = 16;
-            projectile.timeLeft = 900;
+            projectile.timeLeft = 960;
             projectile.penetrate = 3;
             projectile.friendly = true;
             projectile.hostile = false;

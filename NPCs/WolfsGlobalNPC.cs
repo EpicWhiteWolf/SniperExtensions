@@ -17,10 +17,12 @@ namespace SniperExtensions.NPCs
         }
 
         public bool boneBolt = false;
+        public bool lacerations = false;
 
         public override void ResetEffects(NPC npc)
         {
             boneBolt = false;
+            lacerations = false;
         }
 
         public override void SetDefaults(NPC npc)
@@ -49,6 +51,18 @@ namespace SniperExtensions.NPCs
                 if (damage < boneBoltCount * 3)
                 {
                     damage = boneBoltCount * 3;
+                }
+            }
+            if (lacerations)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                npc.lifeRegen -= 100;
+                if (damage < 5)
+                {
+                    damage = 5;
                 }
             }
         }

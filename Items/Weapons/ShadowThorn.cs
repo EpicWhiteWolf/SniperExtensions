@@ -10,6 +10,7 @@ namespace SniperExtensions.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Shadow Thorn");
+            Tooltip.SetDefault("Looking sharp, Shooter!");
         }
 
         public override void SetDefaults()

@@ -10,7 +10,7 @@ namespace SniperExtensions.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Fossil Bolt Puncher");
-            Tooltip.SetDefault("Bone shattering!");
+            Tooltip.SetDefault("Bone Shattering!");
         }
 
         public override void SetDefaults()

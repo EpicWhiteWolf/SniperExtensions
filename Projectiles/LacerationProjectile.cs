@@ -9,15 +9,14 @@ using SniperExtensions.Items.Ammo;
 
 namespace SniperExtensions.Projectiles
 {
-    class ShadowThornProjectile : ModProjectile
+    class LacerationProjectile : ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.Name = "Shadow Thorn";
+            projectile.Name = "Flesh Ripper";
             projectile.width = 16;
             projectile.height = 16;
             projectile.timeLeft = 240;
-            projectile.penetrate = 5;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
@@ -29,12 +28,16 @@ namespace SniperExtensions.Projectiles
         public override void AI()
         {
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
-            Lighting.AddLight(projectile.Center, 0.49f, 0.23f, 1f);
         }
 
         public override Color? GetAlpha(Color lightColor)
         {
             return new Color(1f, 1f, 1f, 1f);
+        }
+
+        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        {
+            target.AddBuff(mod.BuffType<Buffs.LacerationsDebuff>(), 240);
         }
     }
 }
