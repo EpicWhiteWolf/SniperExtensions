@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SniperExtensions.Items.Armor
+namespace WolfsAdditions.Items.Armor
 {
 	[AutoloadEquip(EquipType.Head)]
 	public class GhillieHood : ModItem

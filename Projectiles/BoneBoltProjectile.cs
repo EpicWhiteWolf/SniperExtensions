@@ -1,32 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using SniperExtensions.Items.Ammo;
 
-namespace SniperExtensions.Projectiles
+namespace WolfsAdditions.Projectiles
 {
     public class BoneBoltProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Bone Bolt");
+        }
+
         public override void SetDefaults()
         {
-            projectile.Name = "Bone Bolt";
-            projectile.width = 16;
-            projectile.height = 16;
+            projectile.width = 24;
+            projectile.height = 18;
             projectile.timeLeft = 960;
             projectile.penetrate = 3;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
-            projectile.ignoreWater = true;
+            projectile.ignoreWater = false;
             projectile.ranged = true;
             projectile.aiStyle = 0;
             projectile.hide = true;
         }
-        
+
+        public override Color? GetAlpha(Color lightColor)
+        {
+            Main.NewText(lightColor);
+            return Lighting.GetColor((int)projectile.Center.X / 16, (int)projectile.Center.Y / 16);
+        }
+
         public override void DrawBehind(int index, List<int> drawCacheProjsBehindNPCsAndTiles, List<int> drawCacheProjsBehindNPCs, List<int> drawCacheProjsBehindProjectiles, List<int> drawCacheProjsOverWiresUI)
         {
             if (isStickingToTarget)

@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SniperExtensions.NPCs
+namespace WolfsAdditions.NPCs
 {
     public class WolfsGlobalNPC : GlobalNPC
     {

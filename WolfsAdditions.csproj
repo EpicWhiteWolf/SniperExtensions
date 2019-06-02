@@ -45,6 +45,8 @@
     <Compile Include="Items\Armor\GhillieJacket.cs" />
     <Compile Include="Items\Armor\GhillieHood.cs" />
     <Compile Include="Items\Armor\GhilliePants.cs" />
+    <Compile Include="Items\ServoAssists.cs" />
+    <Compile Include="Items\Weapons\DaedelusGunbow.cs" />
     <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
     <Compile Include="Items\Weapons\LacerationRifle.cs" />
     <Compile Include="Items\Weapons\MoltenSniper.cs" />
@@ -54,7 +56,7 @@
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
     <Compile Include="Projectiles\LacerationProjectile.cs" />
     <Compile Include="Projectiles\ShadowThornProjectile.cs" />
-    <Compile Include="SniperExtensions.cs" />
+    <Compile Include="WolfsAdditions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">

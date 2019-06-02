@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SniperExtensions.Items.Ammo
+namespace WolfsAdditions.Items.Ammo
 {
     public class BoneBolt : ModItem
     {

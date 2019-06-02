@@ -1,14 +1,14 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using SniperExtensions.NPCs;
+using WolfsAdditions.NPCs;
 
-namespace SniperExtensions.Buffs
+namespace WolfsAdditions.Buffs
 {
     class BoneBoltDebuff : ModBuff
     {
         public override bool Autoload(ref string name, ref string texture)
         {
-            texture = "SniperExtensions/Buffs/PlaceholderIcon";
+            texture = "WolfsAdditions/Buffs/PlaceholderIcon";
             return base.Autoload(ref name, ref texture);
         }
 

@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SniperExtensions.Items.Weapons
+namespace WolfsAdditions.Items.Weapons
 {
     public class ScopedRifle : ModItem
     {

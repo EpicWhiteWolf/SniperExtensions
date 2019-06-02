@@ -5,9 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using SniperExtensions.Items.Ammo;
+using WolfsAdditions.Items.Ammo;
 
-namespace SniperExtensions.Projectiles
+namespace WolfsAdditions.Projectiles
 {
     class ShadowThornProjectile : ModProjectile
     {
@@ -30,11 +30,8 @@ namespace SniperExtensions.Projectiles
         {
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
             Lighting.AddLight(projectile.Center, 0.49f, 0.23f, 1f);
-        }
-
-        public override Color? GetAlpha(Color lightColor)
-        {
-            return new Color(1f, 1f, 1f, 1f);
+            Color glow = new Color(1f, 1f, 1f, 1f);
+            GetAlpha(glow);
         }
     }
 }

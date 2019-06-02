@@ -5,9 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using SniperExtensions.Items.Ammo;
+using WolfsAdditions.Items.Ammo;
 
-namespace SniperExtensions.Projectiles
+namespace WolfsAdditions.Projectiles
 {
     class LacerationProjectile : ModProjectile
     {
@@ -28,11 +28,8 @@ namespace SniperExtensions.Projectiles
         public override void AI()
         {
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
-        }
-
-        public override Color? GetAlpha(Color lightColor)
-        {
-            return new Color(1f, 1f, 1f, 1f);
+            Color glow = new Color(1f, 1f, 1f, 1f);
+            GetAlpha(glow);
         }
 
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
