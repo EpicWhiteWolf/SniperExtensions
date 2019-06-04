@@ -11,9 +11,13 @@ namespace WolfsAdditions.Projectiles
 {
     class LacerationProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Flesh Ripper");
+        }
+
         public override void SetDefaults()
         {
-            projectile.Name = "Flesh Ripper";
             projectile.width = 16;
             projectile.height = 16;
             projectile.timeLeft = 240;

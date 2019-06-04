@@ -32,8 +32,8 @@ namespace WolfsAdditions.Items
         {
             if (player.whoAmI == Main.myPlayer)
             {
-                Player.tileRangeX += 4;
-                Player.tileRangeY += 4;
+                Player.tileRangeX += 5;
+                Player.tileRangeY += 5;
             }
         }
 

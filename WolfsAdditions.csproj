@@ -7,7 +7,7 @@
     <ProjectGuid>{8298EAB6-0586-4BDA-9483-83624B66B13A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SniperExtensions</RootNamespace>
+    <RootNamespace>WolfsAdditions</RootNamespace>
     <AssemblyName>SniperExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -35,6 +35,7 @@
   <ItemGroup>
     <Compile Include="Buffs\BoneBoltDebuff.cs" />
     <Compile Include="Buffs\LacerationsDebuff.cs" />
+    <Compile Include="Buffs\MarkedDebuff.cs" />
     <Compile Include="Items\Ammo\BoneBolt.cs" />
     <Compile Include="Items\Armor\FossilLeggings.cs" />
     <Compile Include="Items\Armor\FossilPlatemail.cs" />
@@ -45,7 +46,9 @@
     <Compile Include="Items\Armor\GhillieJacket.cs" />
     <Compile Include="Items\Armor\GhillieHood.cs" />
     <Compile Include="Items\Armor\GhilliePants.cs" />
+    <Compile Include="Items\AncientArtifact.cs" />
     <Compile Include="Items\ServoAssists.cs" />
+    <Compile Include="Items\Weapons\VortexSniper.cs" />
     <Compile Include="Items\Weapons\DaedelusGunbow.cs" />
     <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
     <Compile Include="Items\Weapons\LacerationRifle.cs" />
@@ -56,6 +59,8 @@
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
     <Compile Include="Projectiles\LacerationProjectile.cs" />
     <Compile Include="Projectiles\ShadowThornProjectile.cs" />
+    <Compile Include="Projectiles\VortexMarkProj.cs" />
+    <Compile Include="Projectiles\VortexSniperProj.cs" />
     <Compile Include="WolfsAdditions.cs" />
   </ItemGroup>
   <ItemGroup>

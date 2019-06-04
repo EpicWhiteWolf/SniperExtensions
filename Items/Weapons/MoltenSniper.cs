@@ -26,7 +26,7 @@ namespace WolfsAdditions.Items.Weapons
             item.knockBack = 7;
             item.value = Item.buyPrice(0, 5, 0, 0);
             item.rare = 3;
-            item.UseSound = SoundID.Item14;
+            item.UseSound = SoundID.Item11;
             item.autoReuse = false;
             item.shoot = 10;
             item.shootSpeed = 16f;
@@ -37,7 +37,6 @@ namespace WolfsAdditions.Items.Weapons
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddRecipeGroup("IronBar", 5);
             recipe.AddIngredient(ItemID.Glass, 2);
             recipe.AddIngredient(ItemID.HellstoneBar, 15);
             recipe.AddTile(TileID.Anvils);

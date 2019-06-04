@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Items.Weapons
 {
-    class ShadowThorn : ModItem
+    public class ShadowThorn : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -26,7 +26,7 @@ namespace WolfsAdditions.Items.Weapons
             item.knockBack = 7;
             item.value = Item.buyPrice(0, 0, 1, 0);
             item.rare = 1;
-            item.UseSound = SoundID.Item14;
+            item.UseSound = SoundID.Item11;
             item.autoReuse = false;
             item.shoot = 10;
             item.shootSpeed = 16f;

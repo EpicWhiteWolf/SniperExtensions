@@ -11,9 +11,13 @@ namespace WolfsAdditions.Projectiles
 {
     class ShadowThornProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Shadow Thorn");
+        }
+
         public override void SetDefaults()
         {
-            projectile.Name = "Shadow Thorn";
             projectile.width = 16;
             projectile.height = 16;
             projectile.timeLeft = 240;

@@ -29,7 +29,6 @@ namespace WolfsAdditions.Projectiles
 
         public override Color? GetAlpha(Color lightColor)
         {
-            Main.NewText(lightColor);
             return Lighting.GetColor((int)projectile.Center.X / 16, (int)projectile.Center.Y / 16);
         }
 

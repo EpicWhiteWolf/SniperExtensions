@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Items.Weapons
 {
-    class LacerationRifle : ModItem
+    public class LacerationRifle : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -27,11 +27,22 @@ namespace WolfsAdditions.Items.Weapons
             item.knockBack = 7;
             item.value = Item.buyPrice(0, 5, 0, 0);
             item.rare = 3;
-            item.UseSound = SoundID.Item14;
+            item.UseSound = SoundID.Item11;
             item.autoReuse = false;
             item.shoot = 10;
             item.shootSpeed = 16f;
             item.useAmmo = AmmoID.Bullet;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.Glass, 2);
+            recipe.AddIngredient(ItemID.CrimtaneBar, 10);
+            recipe.AddIngredient(ItemID.TissueSample, 5);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
 
         public override Vector2? HoldoutOffset()

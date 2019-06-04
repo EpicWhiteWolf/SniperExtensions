@@ -18,11 +18,13 @@ namespace WolfsAdditions.NPCs
 
         public bool boneBolt = false;
         public bool lacerations = false;
+        public bool marked = false;
 
         public override void ResetEffects(NPC npc)
         {
             boneBolt = false;
             lacerations = false;
+            marked = false;
         }
 
         public override void SetDefaults(NPC npc)
