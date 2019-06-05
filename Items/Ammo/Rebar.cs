@@ -4,16 +4,16 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Items.Ammo
 {
-    public class BoneBolt : ModItem
+    class Rebar : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bone Bolt");
+            DisplayName.SetDefault("Rebar");
         }
 
         public override void SetDefaults()
         {
-            item.damage = 10;
+            item.damage = 16;
             item.ranged = true;
             item.width = 14;
             item.height = 32;
@@ -22,15 +22,16 @@ namespace WolfsAdditions.Items.Ammo
             item.knockBack = 5f;
             item.value = Item.sellPrice(0, 0, 0, 10);
             item.rare = 1;
-            item.shoot = mod.ProjectileType("BoneBoltProjectile");
+            item.shoot = mod.ProjectileType("RebarProjectile");
             item.shootSpeed = 7f;
-            item.ammo = mod.ItemType("BoneBolt");
+            item.ammo = mod.ItemType("Rebar");
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.FossilOre);
+            recipe.AddRecipeGroup("IronBar");
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this, 25);
             recipe.AddRecipe();
         }

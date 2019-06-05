@@ -37,6 +37,7 @@
     <Compile Include="Buffs\LacerationsDebuff.cs" />
     <Compile Include="Buffs\MarkedDebuff.cs" />
     <Compile Include="Items\Ammo\BoneBolt.cs" />
+    <Compile Include="Items\Ammo\Rebar.cs" />
     <Compile Include="Items\Armor\FossilLeggings.cs" />
     <Compile Include="Items\Armor\FossilPlatemail.cs" />
     <Compile Include="Items\Armor\FossilMask.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="Items\Armor\GhilliePants.cs" />
     <Compile Include="Items\AncientArtifact.cs" />
     <Compile Include="Items\ServoAssists.cs" />
+    <Compile Include="Items\Weapons\Dawnbreaker.cs" />
     <Compile Include="Items\Weapons\VortexSniper.cs" />
     <Compile Include="Items\Weapons\DaedelusGunbow.cs" />
     <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="NPCs\WolfsGlobalNPC.cs" />
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
     <Compile Include="Projectiles\LacerationProjectile.cs" />
+    <Compile Include="Projectiles\RebarProjectile.cs" />
     <Compile Include="Projectiles\ShadowThornProjectile.cs" />
     <Compile Include="Projectiles\VortexMarkProj.cs" />
     <Compile Include="Projectiles\VortexSniperProj.cs" />

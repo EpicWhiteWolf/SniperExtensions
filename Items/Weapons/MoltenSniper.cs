@@ -24,7 +24,7 @@ namespace WolfsAdditions.Items.Weapons
             item.useStyle = 5;
             item.noMelee = true;
             item.knockBack = 7;
-            item.value = Item.buyPrice(0, 5, 0, 0);
+            item.value = Item.sellPrice(0, 2, 10, 0);
             item.rare = 3;
             item.UseSound = SoundID.Item11;
             item.autoReuse = false;
@@ -51,15 +51,20 @@ namespace WolfsAdditions.Items.Weapons
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
+            Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
+            muzzleOffset.Y += -4;
+            speedX *= 1.5f;
+            speedY *= 1.5f;
+
+            if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
+            {
+                position += muzzleOffset;
+            }
+
             if (type == ProjectileID.Bullet)
             {
                 type = ProjectileID.ExplosiveBullet;
             }
-            Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
-            speedX *= 1.5f;
-            speedY *= 1.5f;
-            muzzleOffset.Y += -4;
-            position += muzzleOffset;
             return true;
         }
     }
