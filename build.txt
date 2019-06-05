@@ -1,3 +1,3 @@
 author = EpicWhiteWolf
-version = 0.517
+version = 0.518
 displayName = Wolf's Additions
