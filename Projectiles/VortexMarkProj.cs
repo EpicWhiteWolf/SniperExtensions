@@ -39,6 +39,8 @@ namespace WolfsAdditions.Projectiles
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
             damage *= 0;
+            knockback *= 0;
+            crit = false;
             target.AddBuff(mod.BuffType<Buffs.MarkedDebuff>(), 240);
         }
     }

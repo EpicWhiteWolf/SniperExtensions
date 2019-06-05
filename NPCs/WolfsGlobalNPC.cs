@@ -68,5 +68,13 @@ namespace WolfsAdditions.NPCs
                 }
             }
         }
+
+        public override void DrawEffects(NPC npc, ref Color drawColor)
+        {
+            if (marked)
+            {
+                drawColor = new Color(1f, 0.3f, 0.3f, 1f);
+            }
+        }
     }
 }

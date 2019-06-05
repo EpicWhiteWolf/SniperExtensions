@@ -28,7 +28,7 @@ namespace WolfsAdditions.Projectiles
 
         public override Color? GetAlpha(Color lightColor)
         {
-            return new Color(1f, 0f, 0f, 1f);
+            return new Color(0.1f, 0.8f, 0.6f, 1f);
         }
 
         public override void AI()

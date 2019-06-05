@@ -46,7 +46,7 @@ namespace WolfsAdditions.Items.Weapons
 
         public override Vector2? HoldoutOffset()
         {
-            return new Vector2(-11, -7);
+            return new Vector2(-11, -3);
         }
 
         public override bool ConsumeAmmo(Player player)
@@ -86,6 +86,15 @@ namespace WolfsAdditions.Items.Weapons
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
+
+            Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
+            muzzleOffset.Y += -6;
+
+            if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
+            {
+                position += muzzleOffset;
+            }
+
             if (player.altFunctionUse == 2)
             {
                 type = mod.ProjectileType("VortexMarkProj");
@@ -96,12 +105,9 @@ namespace WolfsAdditions.Items.Weapons
             else
             {
                 type = mod.ProjectileType("VortexSniperProj");
-                speedX *= 1.8f;
-                speedY *= 1.8f;
+                speedX *= 1.6f;
+                speedY *= 1.6f;
             }
-            Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
-            muzzleOffset.Y += -6;
-            position += muzzleOffset;
             return true;
         }
     }
