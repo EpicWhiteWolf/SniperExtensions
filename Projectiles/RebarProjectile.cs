@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WolfsAdditions.Projectiles
@@ -9,6 +10,8 @@ namespace WolfsAdditions.Projectiles
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Rebar");
+            ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
+            ProjectileID.Sets.TrailingMode[projectile.type] = 0;
         }
 
         public override void SetDefaults()

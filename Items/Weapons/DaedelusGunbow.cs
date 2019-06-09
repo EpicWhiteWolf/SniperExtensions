@@ -47,7 +47,7 @@ namespace WolfsAdditions.Items.Weapons
             }
             for (int i = 0; i < 3; i++)
             {
-                position = player.Center + new Vector2(((float)Main.rand.Next(-200, 200) + (Main.mouseX - 960)), -600f - (i * 100));
+                position = Main.screenPosition + new Vector2(((float)Main.rand.Next(-200, 200) + Main.mouseX), -600f - (i * 100));
                 position.Y -= (100 * i);
                 Vector2 heading = target - position;
                 heading.Normalize();

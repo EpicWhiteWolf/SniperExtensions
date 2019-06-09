@@ -19,12 +19,14 @@ namespace WolfsAdditions.NPCs
         public bool boneBolt = false;
         public bool lacerations = false;
         public bool marked = false;
+        public bool deepChill = false;
 
         public override void ResetEffects(NPC npc)
         {
             boneBolt = false;
             lacerations = false;
             marked = false;
+            deepChill = false;
         }
 
         public override void SetDefaults(NPC npc)
@@ -74,6 +76,19 @@ namespace WolfsAdditions.NPCs
             if (marked)
             {
                 drawColor = new Color(1f, 0.3f, 0.3f, 1f);
+            }
+
+            if (deepChill)
+            {
+                drawColor = new Color(0.33f, 0.66f, 1f, 1f);
+            }
+        }
+
+        public override void AI(NPC npc)
+        {
+            if (deepChill)
+            {
+                npc.velocity *= 0.75f;
             }
         }
     }

@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Projectiles
 {
-    class LacerationProjectile : ModProjectile
+    class DeepChillProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Flesh Ripper");
+            DisplayName.SetDefault("Icicle Projectile");
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
         }
@@ -19,6 +19,7 @@ namespace WolfsAdditions.Projectiles
             projectile.width = 16;
             projectile.height = 16;
             projectile.timeLeft = 240;
+            projectile.penetrate = 3;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
@@ -30,13 +31,15 @@ namespace WolfsAdditions.Projectiles
         public override void AI()
         {
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
+            Lighting.AddLight(projectile.Center, 0f, 0.5f, 1f);
             Color glow = new Color(1f, 1f, 1f, 1f);
             GetAlpha(glow);
         }
 
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
-            target.AddBuff(mod.BuffType<Buffs.LacerationsDebuff>(), 240);
+            target.AddBuff(mod.BuffType<Buffs.DeepChillDebuff>(), 240);
         }
     }
 }
+
