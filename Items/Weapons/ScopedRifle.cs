@@ -38,7 +38,6 @@ namespace WolfsAdditions.Items.Weapons
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddRecipeGroup("IronBar", 5);
-            recipe.AddIngredient(ItemID.Glass, 2);
             recipe.AddRecipeGroup("Wood", 4);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);

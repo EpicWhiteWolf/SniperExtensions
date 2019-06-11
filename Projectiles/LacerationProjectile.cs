@@ -38,5 +38,11 @@ namespace WolfsAdditions.Projectiles
         {
             target.AddBuff(mod.BuffType<Buffs.LacerationsDebuff>(), 240);
         }
+
+        public override void Kill(int timeLeft)
+        {
+            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
+            Main.PlaySound(SoundID.Item10, projectile.position);
+        }
     }
 }

@@ -5,13 +5,14 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Projectiles
 {
-    class DeepChillProjectile : ModProjectile
+    class ShroomSporeProj : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Icicle");
+            DisplayName.SetDefault("Shroom Bullet");
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
+            Main.projFrames[projectile.type] = 4;
         }
 
         public override void SetDefaults()
@@ -19,10 +20,10 @@ namespace WolfsAdditions.Projectiles
             projectile.width = 16;
             projectile.height = 16;
             projectile.timeLeft = 240;
-            projectile.penetrate = 3;
+            projectile.penetrate = -1;
             projectile.friendly = true;
             projectile.hostile = false;
-            projectile.tileCollide = true;
+            projectile.tileCollide = false;
             projectile.ignoreWater = true;
             projectile.ranged = true;
             projectile.aiStyle = 0;
@@ -30,22 +31,18 @@ namespace WolfsAdditions.Projectiles
 
         public override void AI()
         {
-            projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
-            Lighting.AddLight(projectile.Center, 0f, 0.5f, 1f);
+            Lighting.AddLight(projectile.Center, 0f, 0f, 1f);
             Color glow = new Color(1f, 1f, 1f, 1f);
             GetAlpha(glow);
-        }
 
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
-        {
-            target.AddBuff(mod.BuffType<Buffs.DeepChillDebuff>(), 240);
-        }
-
-        public override void Kill(int timeLeft)
-        {
-            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
-            Main.PlaySound(SoundID.Item10, projectile.position);
+            if (++projectile.frameCounter >= 10)
+            {
+                projectile.frameCounter = 0;
+                if (++projectile.frame >= 4)
+                {
+                    projectile.frame = 0;
+                }
+            }
         }
     }
 }
-

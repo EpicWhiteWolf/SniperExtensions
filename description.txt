@@ -1,4 +1,33 @@
-Decided not to specialize my mods and just put everything i make all in one.
-Adds more snipers, a usefull accessory for building/mining.
-I plan to add some recepies for a few quality of life things.
-I will try to make this a list of items in my mod at some point.
+So far most of what I've added is sniper related i 
+plan to add more to this mod in the future, like for 
+example tank class items, elemental magic weapons
+and healing weapons.
+
+List of Added Items(in progressional order):
+-Ranged Items
+	1.Scoped Rifle(hint: Iron Bar)
+	2.Ghillie Armor(hint: Living Leaf Wall)
+	3a.Fossil Bolt Puncher(hint: Fossil Ore)
+	3b.Bone Bolts(hint: Fossil Ore)
+	4.Fossil Platemail Armor(hint: Fossil Ore)
+	5a.Shadow Thorn(hint: Demonite Bar)
+	5b.Laceration Rifle(hint: Crimtane Bar)
+	6.Molten Sniper(hint: Hellstone Bar)
+	7.Molten Ranger Armor(hint: Hellstone Bar)
+	8a.Dawnbreaker(hint: Light Shard)
+	8b.Rebar(hint: Iron Bar)
+	9.Deadelus Gunbow(hint: Illegal Gun Parts)
+	10.Frost Sniper(hint: Frost Core)
+	11.Chlorophyte Sniper(hint: Chlorophyte Bar)
+	12.ShroomiteSniper(hint: Shroomite Bar)
+	13.Vortex Sniper(hint: Vortex Fragments)
+-Misc Items/Recipies
+	1.Servo Asists(hint: Wire)
+	2.Arkhalis(hint: Enchanted Sword)
+	3.Sandstorm in a Bottle(hint: Ancient Artifact)
+	4.Ancient Artifact(hint: Fossil Ore)
+	5.Mining Shirt(hint: Silk)
+	6.Mining Pants(hint: Silk)
+	7.Flying Carpet(hint: Silk)
+	8.Slime Staff(hint: Slime Block)
+	9.Frozen Turtle Shell(hint: Frost Core)

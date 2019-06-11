@@ -50,8 +50,10 @@
     <Compile Include="Items\Armor\GhilliePants.cs" />
     <Compile Include="Items\AncientArtifact.cs" />
     <Compile Include="Items\ServoAssists.cs" />
+    <Compile Include="Items\Weapons\ChlorophyteSniper.cs" />
     <Compile Include="Items\Weapons\Dawnbreaker.cs" />
     <Compile Include="Items\Weapons\FrostSniper.cs" />
+    <Compile Include="Items\Weapons\ShroomiteSniper.cs" />
     <Compile Include="Items\Weapons\VortexSniper.cs" />
     <Compile Include="Items\Weapons\DaedelusGunbow.cs" />
     <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
@@ -65,6 +67,8 @@
     <Compile Include="Projectiles\LacerationProjectile.cs" />
     <Compile Include="Projectiles\RebarProjectile.cs" />
     <Compile Include="Projectiles\ShadowThornProjectile.cs" />
+    <Compile Include="Projectiles\ShroomProjectile.cs" />
+    <Compile Include="Projectiles\ShroomSporeProj.cs" />
     <Compile Include="Projectiles\VortexMarkProj.cs" />
     <Compile Include="Projectiles\VortexSniperProj.cs" />
     <Compile Include="WolfsAdditions.cs" />

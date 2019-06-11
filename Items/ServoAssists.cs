@@ -27,7 +27,7 @@ namespace WolfsAdditions.Items
             player.pickSpeed -= 10;
             player.wallSpeed += 10;
         }
-
+        
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             if (player.whoAmI == Main.myPlayer)
