@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Buffs\AMG.cs" />
     <Compile Include="Buffs\BoneBoltDebuff.cs" />
     <Compile Include="Buffs\DeepChillDebuff.cs" />
     <Compile Include="Buffs\LacerationsDebuff.cs" />
@@ -49,7 +50,7 @@
     <Compile Include="Items\Armor\GhillieHood.cs" />
     <Compile Include="Items\Armor\GhilliePants.cs" />
     <Compile Include="Items\AncientArtifact.cs" />
-    <Compile Include="Items\ServoAssists.cs" />
+    <Compile Include="Items\Accessories\ArchitectsMiningGear.cs" />
     <Compile Include="Items\Weapons\ChlorophyteSniper.cs" />
     <Compile Include="Items\Weapons\Dawnbreaker.cs" />
     <Compile Include="Items\Weapons\FrostSniper.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Projectiles\VortexMarkProj.cs" />
     <Compile Include="Projectiles\VortexSniperProj.cs" />
     <Compile Include="WolfsAdditions.cs" />
+    <Compile Include="WolfsPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">

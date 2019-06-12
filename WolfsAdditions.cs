@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -5,10 +6,22 @@ namespace WolfsAdditions
 {
 	class WolfsAdditions : Mod
 	{
-		public WolfsAdditions()
+        internal static WolfsAdditions instance;
+
+        public WolfsAdditions()
 		{
 
 		}
+
+        public override void Load()
+        {
+            if (!Main.dedServ)
+            {
+                AddEquipTexture(new Items.Accessories.AMGHead(), null, EquipType.Head, "AMGHead", "WolfsAdditions/Items/Accessories/ArchitectsMiningGear_Head");
+                AddEquipTexture(new Items.Accessories.AMGBody(), null, EquipType.Body, "AMGBody", "WolfsAdditions/Items/Accessories/ArchitectsMiningGear_Body", "WolfsAdditions/Items/Accessories/ArchitectsMiningGear_Arms", "WolfsAdditions/Items/Accessories/ArchitectsMiningGear_FemaleBody");
+                AddEquipTexture(new Items.Accessories.AMGLegs(), null, EquipType.Legs, "AMGLegs", "WolfsAdditions/Items/Accessories/ArchitectsMiningGear_Legs");
+            }
+        }
 
         public override void AddRecipes()
         {

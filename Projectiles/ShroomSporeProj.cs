@@ -9,7 +9,7 @@ namespace WolfsAdditions.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Shroom Bullet");
+            DisplayName.SetDefault("Shroom Spore");
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
             Main.projFrames[projectile.type] = 4;

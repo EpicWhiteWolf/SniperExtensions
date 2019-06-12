@@ -22,7 +22,7 @@ List of Added Items(in progressional order):
 	12.ShroomiteSniper(hint: Shroomite Bar)
 	13.Vortex Sniper(hint: Vortex Fragments)
 -Misc Items/Recipies
-	1.Servo Asists(hint: Wire)
+	1.Architects Mining Gear(hint: Mining Helmet)
 	2.Arkhalis(hint: Enchanted Sword)
 	3.Sandstorm in a Bottle(hint: Ancient Artifact)
 	4.Ancient Artifact(hint: Fossil Ore)
