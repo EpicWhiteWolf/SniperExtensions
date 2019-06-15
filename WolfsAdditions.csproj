@@ -38,6 +38,8 @@
     <Compile Include="Buffs\DeepChillDebuff.cs" />
     <Compile Include="Buffs\LacerationsDebuff.cs" />
     <Compile Include="Buffs\MarkedDebuff.cs" />
+    <Compile Include="Items\Accessories\HolyCrossNecklace.cs" />
+    <Compile Include="Items\Accessories\HolyGrail.cs" />
     <Compile Include="Items\Ammo\BoneBolt.cs" />
     <Compile Include="Items\Ammo\Rebar.cs" />
     <Compile Include="Items\Armor\FossilLeggings.cs" />

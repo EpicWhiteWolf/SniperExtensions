@@ -12,7 +12,6 @@ namespace WolfsAdditions.Items.Armor
 		{
             base.SetStaticDefaults();
             DisplayName.SetDefault("Molten Helm");
-            Tooltip.SetDefault("15% increased ranged crit chance");
         }
 
 		public override void SetDefaults()
@@ -24,11 +23,6 @@ namespace WolfsAdditions.Items.Armor
 			item.defense = 6;
 		}
 
-        public override void UpdateEquip(Player player)
-        {
-            player.rangedCrit += 15;
-        }
-
         public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
 			return body.type == mod.ItemType("MoltenJacket") && legs.type == mod.ItemType("MoltenLeggings");
@@ -36,8 +30,8 @@ namespace WolfsAdditions.Items.Armor
 
 		public override void UpdateArmorSet(Player player)
 		{
-            player.setBonus = "25% increased ranged damage" + "\nImmunity to fire";
-            player.rangedDamage *= 1.25f;
+            player.setBonus = "10% increased crit chance" + "\nImmunity to fire";
+            player.rangedCrit += 10;
             player.buffImmune[BuffID.OnFire] = true;
         }
 

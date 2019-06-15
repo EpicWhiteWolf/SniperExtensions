@@ -10,26 +10,28 @@ namespace WolfsAdditions.Items.Accessories
         public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Architect's Mining Gear");
-			Tooltip.SetDefault("Precision.");
+			Tooltip.SetDefault("Tile and wall placement speed greatly increased" 
+                + "\nMining speed greatly increased"
+                + "\nAutomatically paints placed objects"
+                + "\nProvides light when worn"
+                + "\n+1 range");
 		}
 		public override void SetDefaults()
 		{
 			item.width = 40;
 			item.height = 40;
-			item.value = 10000;
-			item.rare = 2;
+            item.value = Item.sellPrice(0, 5, 0, 0);
+			item.rare = 6;
             item.accessory = true;
 		}
 
-        public override void UpdateEquip(Player player)
+        public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.tileSpeed *= 4;
             player.pickSpeed -= 10;
             player.wallSpeed += 10;
-        }
+            player.autoPaint = true;
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
-        {
             if (player.whoAmI == Main.myPlayer)
             {
                 Player.tileRangeX += 3;

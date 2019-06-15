@@ -12,7 +12,7 @@ namespace WolfsAdditions.Items.Armor
 		{
 			base.SetStaticDefaults();
 			DisplayName.SetDefault("Molten Jacket");
-            Tooltip.SetDefault("20% increased bullet damage");
+            Tooltip.SetDefault("15% increased ranged damage");
         }
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace WolfsAdditions.Items.Armor
 
 		public override void UpdateEquip(Player player)
 		{
-            player.bulletDamage *= 1.2f;
+            player.rangedDamage *= 1.15f;
         }
 
         public override void AddRecipes()

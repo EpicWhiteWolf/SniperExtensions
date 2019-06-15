@@ -19,14 +19,14 @@ namespace WolfsAdditions.Projectiles
         {
             projectile.width = 16;
             projectile.height = 16;
-            projectile.timeLeft = 240;
+            projectile.timeLeft = 240 + Main.rand.Next(0, 240);
             projectile.penetrate = -1;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = false;
             projectile.ignoreWater = true;
             projectile.ranged = true;
-            projectile.aiStyle = 0;
+            projectile.aiStyle = 6;
         }
 
         public override void AI()

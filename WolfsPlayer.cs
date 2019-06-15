@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -11,9 +12,11 @@ namespace WolfsAdditions
         public bool amgHideVanity;
         public bool amgForceVanity;
         public bool amgVisual;
+        public bool accHolyGrail;
 
         public override void ResetEffects()
         {
+            accHolyGrail = false;
             amgAccessoryPrevious = amgAccessory;
             amgAccessory = amgHideVanity = amgForceVanity = amgVisual = false;
         }

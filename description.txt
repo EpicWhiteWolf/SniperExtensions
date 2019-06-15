@@ -21,6 +21,9 @@ List of Added Items(in progressional order):
 	11.Chlorophyte Sniper(hint: Chlorophyte Bar)
 	12.ShroomiteSniper(hint: Shroomite Bar)
 	13.Vortex Sniper(hint: Vortex Fragments)
+-Tank Items
+	1.Holy Grail(hint: Mimic)
+	2.Holy Cross Necklace(hint: Holy Grail)
 -Misc Items/Recipies
 	1.Architects Mining Gear(hint: Mining Helmet)
 	2.Arkhalis(hint: Enchanted Sword)
@@ -31,3 +34,6 @@ List of Added Items(in progressional order):
 	7.Flying Carpet(hint: Silk)
 	8.Slime Staff(hint: Slime Block)
 	9.Frozen Turtle Shell(hint: Frost Core)
+
+	Special thanks to all the contributors of ExampleMod
+	https://github.com/blushiemagic/tModLoader/graphs/contributors?from=2015-07-19&to=2019-06-13&type=c

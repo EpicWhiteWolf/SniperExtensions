@@ -12,7 +12,7 @@ namespace WolfsAdditions.Items.Armor
 		{
 			base.SetStaticDefaults();
 			DisplayName.SetDefault("Ghillie Jacket");
-			Tooltip.SetDefault("10% increased bullet damage");
+			Tooltip.SetDefault("5% increased ranged damage");
 
         }
 
@@ -27,7 +27,7 @@ namespace WolfsAdditions.Items.Armor
 
 		public override void UpdateEquip(Player player)
 		{
-            player.bulletDamage *= 1.1f;
+            player.rangedDamage *= 1.05f;
 		}
 
         public override void AddRecipes()

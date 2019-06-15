@@ -12,7 +12,6 @@ namespace WolfsAdditions.Items.Armor
         {
             base.SetDefaults();
             DisplayName.SetDefault("Fossil Mask");
-            Tooltip.SetDefault("15% increased ranged crit chance");
         }
 
         public override void SetDefaults()
@@ -24,11 +23,6 @@ namespace WolfsAdditions.Items.Armor
             item.defense = 3;
         }
 
-        public override void UpdateEquip(Player player)
-        {
-            player.rangedCrit += 15;
-        }
-
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
             return body.type == mod.ItemType("FossilPlatemail") && legs.type == mod.ItemType("FossilLeggings");
@@ -36,8 +30,8 @@ namespace WolfsAdditions.Items.Armor
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "20% increased ranged damage";
-            player.rangedDamage *= 1.20f;
+            player.setBonus = "5% increased crit chance";
+            player.rangedDamage += 5;
         }
 
         public override void AddRecipes()

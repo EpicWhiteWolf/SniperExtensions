@@ -10,7 +10,8 @@ namespace WolfsAdditions.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Dawnbreaker");
-            Tooltip.SetDefault("Split the horizon");
+            Tooltip.SetDefault("Uses Rebar as ammo"
+                + "\nSplit the horizon!");
         }
 
         public override void SetDefaults()

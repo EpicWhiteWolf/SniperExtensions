@@ -71,6 +71,17 @@ namespace WolfsAdditions.NPCs
             }
         }
 
+        public override void NPCLoot(NPC npc)
+        {
+            if (npc.type == NPCID.Mimic)
+            {
+                if (Main.rand.Next(6) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HolyGrail"));
+                }
+            }
+        }
+
         public override void DrawEffects(NPC npc, ref Color drawColor)
         {
             if (marked)

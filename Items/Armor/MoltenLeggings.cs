@@ -12,7 +12,7 @@ namespace WolfsAdditions.Items.Armor
 		{
             base.SetStaticDefaults();
             DisplayName.SetDefault("Molten Leggings");
-            Tooltip.SetDefault("20% increased movement speed");
+            Tooltip.SetDefault("10% increased movement speed");
         }
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace WolfsAdditions.Items.Armor
 
 		public override void UpdateEquip(Player player)
 		{
-			player.moveSpeed *= 1.2f;
+			player.moveSpeed *= 1.1f;
 		}
 
         public override void AddRecipes()

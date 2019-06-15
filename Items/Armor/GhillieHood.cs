@@ -12,7 +12,6 @@ namespace WolfsAdditions.Items.Armor
 		{
             base.SetDefaults();
             DisplayName.SetDefault("Ghillie Hood");
-			Tooltip.SetDefault("10% increased ranged crit chance");
 		}
 
 		public override void SetDefaults()
@@ -24,11 +23,6 @@ namespace WolfsAdditions.Items.Armor
 			item.defense = 1;
 		}
 
-        public override void UpdateEquip(Player player)
-        {
-            player.rangedCrit += 10;
-        }
-
         public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
 			return body.type == mod.ItemType("GhillieJacket") && legs.type == mod.ItemType("GhilliePants");
@@ -36,8 +30,8 @@ namespace WolfsAdditions.Items.Armor
 
 		public override void UpdateArmorSet(Player player)
 		{
-            player.setBonus = "15% increased ranged damage";
-            player.rangedDamage *= 1.15f;
+            player.setBonus = "2% increased crit chance";
+            player.rangedCrit += 2;
 		}
 
         public override void AddRecipes()

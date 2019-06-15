@@ -12,7 +12,7 @@ namespace WolfsAdditions.Items.Armor
         {
             base.SetDefaults();
             DisplayName.SetDefault("Fossil Platemail");
-            Tooltip.SetDefault("15% increased bullet damage");
+            Tooltip.SetDefault("10% increased ranged damage");
         }
 
         public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace WolfsAdditions.Items.Armor
 
         public override void UpdateEquip(Player player)
         {
-            player.bulletDamage *= 1.15f;
+            player.rangedDamage *= 1.1f;
         }
 
         public override void AddRecipes()

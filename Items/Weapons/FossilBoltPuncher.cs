@@ -10,7 +10,8 @@ namespace WolfsAdditions.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Fossil Bolt Puncher");
-            Tooltip.SetDefault("Bone Shattering!");
+            Tooltip.SetDefault("Uses Bone Bolts as ammo"
+                + "\nBone Shattering!");
         }
 
         public override void SetDefaults()
