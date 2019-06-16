@@ -51,10 +51,8 @@ namespace WolfsAdditions.Projectiles
         {
             for (int i = 0; i < 8; i++)
             {
-                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f, Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
-                Main.projectile[a].timeLeft = 240 + Main.rand.Next(0, 240);
-                Main.projectile[a].aiStyle = 6;
-                Main.projectile[a].tileCollide = false;
+                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f,
+                    Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
             }
             return true;
         }
@@ -63,10 +61,8 @@ namespace WolfsAdditions.Projectiles
         {
             for (int i = 0; i < 8; i++)
             {
-                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f, Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
-                Main.projectile[a].timeLeft = 240 + Main.rand.Next(0, 240);
-                Main.projectile[a].aiStyle = 6;
-                Main.projectile[a].tileCollide = false;
+                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f,
+                    Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
             }
         }
     }
