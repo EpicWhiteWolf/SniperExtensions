@@ -36,7 +36,5 @@ List of Added Items(in progressional order):
 	9.Frozen Turtle Shell(hint: Frost Core)
 
 	I'm always open to feedback and constructive criticism!
-	https://forums.terraria.org/index.php?threads/wolfs-additions-feedback.80366/
 
 	Special thanks to all the contributors of ExampleMod
-	https://github.com/blushiemagic/tModLoader/graphs/contributors?from=2015-07-19&to=2019-06-13&type=c
