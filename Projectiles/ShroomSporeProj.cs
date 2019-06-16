@@ -20,7 +20,7 @@ namespace WolfsAdditions.Projectiles
             projectile.width = 16;
             projectile.height = 16;
             projectile.penetrate = -1;
-            projectile.timeLeft = Main.rand.Next(240, 480);
+            projectile.timeLeft = 240;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = false;

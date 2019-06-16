@@ -53,6 +53,7 @@ namespace WolfsAdditions.Projectiles
             {
                 int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f,
                     Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
+                Main.projectile[a].timeLeft += Main.rand.Next(240);
             }
             return true;
         }
@@ -63,6 +64,7 @@ namespace WolfsAdditions.Projectiles
             {
                 int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f,
                     Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
+                Main.projectile[a].timeLeft += Main.rand.Next(240);
             }
         }
     }

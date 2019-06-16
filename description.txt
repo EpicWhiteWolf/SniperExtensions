@@ -24,6 +24,8 @@ List of Added Items(in progressional order):
 -Tank Items
 	1.Holy Grail(hint: Mimic)
 	2.Holy Cross Necklace(hint: Holy Grail)
+-Movement Items
+	1.Soul of True Flight(hint: 1%/2% Wyvern drop)
 -Misc Items/Recipies
 	1.Architects Mining Gear(hint: Mining Helmet)
 	2.Arkhalis(hint: Enchanted Sword)
@@ -35,6 +37,6 @@ List of Added Items(in progressional order):
 	8.Slime Staff(hint: Slime Block)
 	9.Frozen Turtle Shell(hint: Frost Core)
 
-	I'm always open to feedback and constructive criticism!
+I'm always open to feedback and constructive criticism!
 
-	Special thanks to all the contributors of ExampleMod
+Special thanks to all the contributors of ExampleMod

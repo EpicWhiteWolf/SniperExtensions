@@ -1,4 +1,4 @@
 author = EpicWhiteWolf
-version = 0.543
+version = 0.551
 displayName = Wolf's Additions
 homepage = https://forums.terraria.org/index.php?threads/wolfs-additions-feedback.80366/
