@@ -37,6 +37,7 @@ List of Added Items(in progressional order):
 	8.Slime Staff(hint: Slime Block)
 	9.Frozen Turtle Shell(hint: Frost Core)
 
+Please visit the mod homepage,
 I'm always open to feedback and constructive criticism!
 
 Special thanks to all the contributors of ExampleMod

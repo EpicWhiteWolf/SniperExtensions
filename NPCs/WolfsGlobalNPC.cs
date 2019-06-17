@@ -80,6 +80,18 @@ namespace WolfsAdditions.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HolyGrail"));
                 }
             }
+
+            if (npc.type == NPCID.WyvernHead)
+            {
+                if (Main.expertMode && Main.rand.NextBool(50))
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SoulTrueFlight"));
+                }
+                else if (!Main.expertMode && Main.rand.NextBool(100))
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SoulTrueFlight"));
+                }
+            }
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)
