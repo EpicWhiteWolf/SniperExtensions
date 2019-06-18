@@ -53,9 +53,9 @@ namespace WolfsAdditions.Items.Accessories
                 Lighting.AddLight(player.Center, 1f, 1f, 0.75f);
             }
 
-            if (player.statLife <= (float)player.statLifeMax * 0.25f)
+            if (player.statLife <= (float)player.statLifeMax2 * 0.25f)
             {
-                player.endurance = 0.95f * (1 - (player.statLife / ((float)player.statLifeMax * 0.25f)));
+                player.endurance = 0.98f * (1 - (player.statLife / ((float)player.statLifeMax2 * 0.25f)));
             }
         }
     }

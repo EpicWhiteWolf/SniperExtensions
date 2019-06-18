@@ -75,7 +75,7 @@ namespace WolfsAdditions.NPCs
         {
             if (npc.type == NPCID.Mimic)
             {
-                if (Main.rand.Next(6) == 0)
+                if (Main.rand.NextBool(7))
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("HolyGrail"));
                 }
@@ -83,11 +83,11 @@ namespace WolfsAdditions.NPCs
 
             if (npc.type == NPCID.WyvernHead)
             {
-                if (Main.expertMode && Main.rand.NextBool(50))
+                if (Main.expertMode && Main.rand.NextBool(10))
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SoulTrueFlight"));
                 }
-                else if (!Main.expertMode && Main.rand.NextBool(100))
+                else if (!Main.expertMode && Main.rand.NextBool(20))
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SoulTrueFlight"));
                 }

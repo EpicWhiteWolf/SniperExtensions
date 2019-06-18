@@ -32,7 +32,7 @@ namespace WolfsAdditions.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.wingTime = 180 * 1000000;
-            player.maxFallSpeed *= 2;
+            player.maxFallSpeed *= 1.5f;
             player.noFallDmg = true;
         }
 
@@ -41,15 +41,15 @@ namespace WolfsAdditions.Items.Accessories
         {
             ascentWhenFalling = 2f;
             ascentWhenRising = 0.15f;
-            maxCanAscendMultiplier = 2f;
-            maxAscentMultiplier = 4f;
+            maxCanAscendMultiplier = 1f;
+            maxAscentMultiplier = 3f;
             constantAscend = 0.135f;
         }
 
         public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
         {
-            speed = 20f;
-            acceleration *= 5f;
+            speed = 15f;
+            acceleration *= 3f;
         }
 
         public override Color? GetAlpha(Color lightColor)
