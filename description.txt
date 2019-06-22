@@ -1,9 +1,17 @@
+(Use to be Sniper Extensions)
+
 So far most of what I've added is sniper related i 
 plan to add more to this mod in the future, like for 
 example tank class items, elemental magic weapons
 and healing weapons.
 
 List of Added Items(in progressional order):
+-Magic Items
+	1.
+	2.
+	3.
+	4.
+	5.
 -Ranged Items
 	1.Scoped Rifle(hint: Iron Bar)
 	2.Ghillie Armor(hint: Living Leaf Wall)

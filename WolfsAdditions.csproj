@@ -52,20 +52,26 @@
     <Compile Include="Items\Armor\GhillieJacket.cs" />
     <Compile Include="Items\Armor\GhillieHood.cs" />
     <Compile Include="Items\Armor\GhilliePants.cs" />
-    <Compile Include="Items\AncientArtifact.cs" />
+    <Compile Include="Items\Crafting\AncientArtifact.cs" />
     <Compile Include="Items\Accessories\ArchitectsMiningGear.cs" />
-    <Compile Include="Items\Weapons\ChlorophyteSniper.cs" />
-    <Compile Include="Items\Weapons\Dawnbreaker.cs" />
-    <Compile Include="Items\Weapons\FrostSniper.cs" />
-    <Compile Include="Items\Weapons\ShroomiteSniper.cs" />
-    <Compile Include="Items\Weapons\VortexSniper.cs" />
-    <Compile Include="Items\Weapons\DaedelusGunbow.cs" />
-    <Compile Include="Items\Weapons\FossilBoltPuncher.cs" />
-    <Compile Include="Items\Weapons\LacerationRifle.cs" />
-    <Compile Include="Items\Weapons\MoltenSniper.cs" />
-    <Compile Include="Items\Weapons\ScopedRifle.cs" />
-    <Compile Include="Items\Weapons\ShadowThorn.cs" />
+    <Compile Include="Items\Weapons\Magic\AirWand.cs" />
+    <Compile Include="Items\Weapons\Magic\EarthWand.cs" />
+    <Compile Include="Items\Weapons\Magic\ElementalWand.cs" />
+    <Compile Include="Items\Weapons\Magic\FireWand.cs" />
+    <Compile Include="Items\Weapons\Magic\IceWand.cs" />
+    <Compile Include="Items\Weapons\Ranged\ChlorophyteSniper.cs" />
+    <Compile Include="Items\Weapons\Ranged\Dawnbreaker.cs" />
+    <Compile Include="Items\Weapons\Ranged\FrostSniper.cs" />
+    <Compile Include="Items\Weapons\Ranged\ShroomiteSniper.cs" />
+    <Compile Include="Items\Weapons\Ranged\VortexSniper.cs" />
+    <Compile Include="Items\Weapons\Ranged\DaedelusGunbow.cs" />
+    <Compile Include="Items\Weapons\Ranged\FossilBoltPuncher.cs" />
+    <Compile Include="Items\Weapons\Ranged\LacerationRifle.cs" />
+    <Compile Include="Items\Weapons\Ranged\MoltenSniper.cs" />
+    <Compile Include="Items\Weapons\Ranged\ScopedRifle.cs" />
+    <Compile Include="Items\Weapons\Ranged\ShadowThorn.cs" />
     <Compile Include="NPCs\WolfsGlobalNPC.cs" />
+    <Compile Include="Projectiles\AirProjectile.cs" />
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
     <Compile Include="Projectiles\DeepChillProjectile.cs" />
     <Compile Include="Projectiles\LacerationProjectile.cs" />
@@ -105,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dusts\" />
+    <Folder Include="Items\Weapons\Melee\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

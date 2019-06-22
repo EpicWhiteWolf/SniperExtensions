@@ -3,42 +3,44 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WolfsAdditions.Items.Weapons
+namespace WolfsAdditions.Items.Weapons.Ranged
 {
-    public class ChlorophyteSniper : ModItem
+    public class FossilBoltPuncher : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Chlorophyte Sniper");
-            Tooltip.SetDefault("3x the fun");
+            DisplayName.SetDefault("Fossil Bolt Puncher");
+            Tooltip.SetDefault("Uses Bone Bolts as ammo"
+                + "\nBone Shattering!");
         }
 
         public override void SetDefaults()
         {
-            item.damage = 70;
+            item.damage = 65;
             item.ranged = true;
-            item.width = 74;
+            item.width = 96;
             item.height = 20;
             item.useTime = 60;
             item.useAnimation = 60;
             item.useStyle = 5;
             item.noMelee = true;
             item.knockBack = 7;
-            item.value = Item.sellPrice(0, 5, 52, 0);
-            item.rare = 7;
-            item.UseSound = SoundID.Item11;
+            item.value = Item.sellPrice(0, 0, 50, 0);
+            item.rare = 1;
+            item.UseSound = SoundID.Item5;
             item.autoReuse = false;
             item.shoot = 10;
             item.shootSpeed = 16f;
-            item.useAmmo = AmmoID.Bullet;
+            item.useAmmo = mod.ItemType("BoneBolt");
             item.crit = 16;
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
-            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.AddRecipeGroup("IronBar", 5);
+            recipe.AddIngredient(ItemID.FossilOre, 8);
+            recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
@@ -50,12 +52,14 @@ namespace WolfsAdditions.Items.Weapons
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            for (int i = 0; i < 3; i++)
+            Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
+            muzzleOffset.Y += -5;
+
+            if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
             {
-                Vector2 projSpread = new Vector2(speedX, speedY).RotatedBy(MathHelper.ToRadians((1 * i) - 1));
-                Projectile.NewProjectile(position.X, position.Y - 4, projSpread.X, projSpread.Y, type, damage, knockBack, player.whoAmI);
+                position += muzzleOffset;
             }
-            return false;
+            return true;
         }
     }
 }

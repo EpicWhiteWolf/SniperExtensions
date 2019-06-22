@@ -20,6 +20,7 @@ namespace WolfsAdditions.NPCs
         public bool lacerations = false;
         public bool marked = false;
         public bool deepChill = false;
+        public bool frosted = false;
 
         public override void ResetEffects(NPC npc)
         {
@@ -27,11 +28,13 @@ namespace WolfsAdditions.NPCs
             lacerations = false;
             marked = false;
             deepChill = false;
+            frosted = false;
         }
 
         public override void SetDefaults(NPC npc)
         {
             npc.buffImmune[mod.BuffType<Buffs.BoneBoltDebuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[mod.BuffType<Buffs.MarkedDebuff>()] = npc.buffImmune[BuffID.BoneJavelin];
         }
 
         public override void UpdateLifeRegen(NPC npc, ref int damage)
@@ -105,6 +108,11 @@ namespace WolfsAdditions.NPCs
             {
                 drawColor = new Color(0.33f, 0.66f, 1f, 1f);
             }
+
+            if (frosted)
+            {
+                drawColor = new Color(0.8f, 0.8f, 0.8f, 1f);
+            }
         }
 
         public override void AI(NPC npc)
@@ -113,11 +121,23 @@ namespace WolfsAdditions.NPCs
             {
                 if (npc.aiStyle == 1 || npc.aiStyle == 3 || npc.aiStyle == 15 || npc.aiStyle == 19 || npc.aiStyle == 25 || npc.aiStyle == 26 || npc.aiStyle == 38)
                 {
-                    npc.velocity.X *= 0.9f;
+                    npc.velocity.X *= 0.5f;
                 }
                 else
                 {
-                    npc.velocity *= 0.9f;
+                    npc.velocity *= 0.5f;
+                }
+            }
+
+            if (frosted)
+            {
+                if (npc.aiStyle == 1 || npc.aiStyle == 3 || npc.aiStyle == 15 || npc.aiStyle == 19 || npc.aiStyle == 25 || npc.aiStyle == 26 || npc.aiStyle == 38)
+                {
+                    npc.velocity.X *= 0.95f;
+                }
+                else
+                {
+                    npc.velocity *= 0.95f;
                 }
             }
         }

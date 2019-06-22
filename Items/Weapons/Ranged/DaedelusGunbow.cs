@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WolfsAdditions.Items.Weapons
+namespace WolfsAdditions.Items.Weapons.Ranged
 {
     class DaedelusGunbow : ModItem
     {

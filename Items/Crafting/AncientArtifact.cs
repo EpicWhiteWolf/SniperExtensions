@@ -1,7 +1,7 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WolfsAdditions.Items
+namespace WolfsAdditions.Items.Crafting
 {
     class AncientArtifact : ModItem
     {

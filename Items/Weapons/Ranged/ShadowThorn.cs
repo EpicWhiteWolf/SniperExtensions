@@ -3,20 +3,19 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-
-namespace WolfsAdditions.Items.Weapons
+namespace WolfsAdditions.Items.Weapons.Ranged
 {
-    public class LacerationRifle : ModItem
+    public class ShadowThorn : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Laceration Rifle");
-            Tooltip.SetDefault("Strip the flesh!" + "\nSalt the wound!");
+            DisplayName.SetDefault("Shadow Thorn");
+            Tooltip.SetDefault("Looking sharp, Shooter!");
         }
 
         public override void SetDefaults()
         {
-            item.damage = 45;
+            item.damage = 40;
             item.ranged = true;
             item.width = 74;
             item.height = 20;
@@ -26,19 +25,20 @@ namespace WolfsAdditions.Items.Weapons
             item.noMelee = true;
             item.knockBack = 7;
             item.value = Item.sellPrice(0, 0, 54, 0);
-            item.rare = 3;
+            item.rare = 1;
             item.UseSound = SoundID.Item11;
             item.autoReuse = false;
             item.shoot = 10;
             item.shootSpeed = 16f;
             item.useAmmo = AmmoID.Bullet;
+            item.crit = 16;
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CrimtaneBar, 10);
-            recipe.AddIngredient(ItemID.TissueSample, 5);
+            recipe.AddIngredient(ItemID.DemoniteBar, 12);
+            recipe.AddIngredient(ItemID.ShadowScale, 6);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
@@ -63,7 +63,7 @@ namespace WolfsAdditions.Items.Weapons
 
             if (type == ProjectileID.Bullet)
             {
-                type = mod.ProjectileType("LacerationProjectile");
+                type = mod.ProjectileType("ShadowThornProjectile");
             }
             return true;
         }
