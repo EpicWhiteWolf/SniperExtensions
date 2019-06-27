@@ -6,11 +6,11 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Projectiles
 {
-    class IceProjectile : ModProjectile
+    class IceShardProj : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Icicle");
+            DisplayName.SetDefault("Ice Shard");
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
         }
@@ -26,6 +26,7 @@ namespace WolfsAdditions.Projectiles
             projectile.ignoreWater = true;
             projectile.ranged = true;
             projectile.aiStyle = 0;
+            projectile.penetrate = 2;
         }
 
         public override void AI()
@@ -44,16 +45,6 @@ namespace WolfsAdditions.Projectiles
             }
             Main.PlaySound(SoundID.Item27, projectile.position);
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
-        }
-
-        public override bool PreKill(int timeLeft)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                Vector2 projSpread = new Vector2(projectile.velocity.X, projectile.velocity.Y).RotatedBy(MathHelper.ToRadians((10 * i) - 10));
-                Projectile.NewProjectile(projectile.position.X, projectile.position.Y - 4, projSpread.X, projSpread.Y, mod.ProjectileType("IceShardProj"), projectile.damage, projectile.knockBack, projectile.owner);
-            }
-            return true;
         }
 
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)

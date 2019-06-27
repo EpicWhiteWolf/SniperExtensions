@@ -7,9 +7,9 @@ and healing weapons.
 
 List of Added Items(in progressional order):
 -Magic Items
-	1.
-	2.
-	3.
+	1.Wand of Air(hint: Bottle)
+	2.Wand of Ice(hint: Ice Block)
+	3.Wand of Stone
 	4.
 	5.
 -Ranged Items

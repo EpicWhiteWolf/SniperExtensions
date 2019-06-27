@@ -111,7 +111,7 @@ namespace WolfsAdditions.NPCs
 
             if (frosted)
             {
-                drawColor = new Color(0.8f, 0.8f, 0.8f, 1f);
+                drawColor = new Color(1f, 1f, 1f, 1f);
             }
         }
 

@@ -11,6 +11,7 @@ namespace WolfsAdditions.Items.Weapons.Magic
         {
             DisplayName.SetDefault("Wand of Ice");
             Tooltip.SetDefault("Bad Gunter!");
+            Item.staff[item.type] = true;
         }
 
         public override void SetDefaults()
@@ -22,7 +23,7 @@ namespace WolfsAdditions.Items.Weapons.Magic
             item.height = 10;
             item.useTime = 35;
             item.useAnimation = 35;
-            item.useStyle = 1;
+            item.useStyle = 5;
             item.noMelee = true;
             item.knockBack = 2;
             item.value = Item.sellPrice(0, 0, 5, 0);
@@ -30,7 +31,7 @@ namespace WolfsAdditions.Items.Weapons.Magic
             item.UseSound = SoundID.Item8;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("IceProjectile");
-            item.shootSpeed = 6f;
+            item.shootSpeed = 12f;
         }
 
         public override void AddRecipes()

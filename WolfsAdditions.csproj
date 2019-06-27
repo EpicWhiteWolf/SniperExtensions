@@ -57,7 +57,7 @@
     <Compile Include="Items\Crafting\AncientArtifact.cs" />
     <Compile Include="Items\Accessories\ArchitectsMiningGear.cs" />
     <Compile Include="Items\Weapons\Magic\AirWand.cs" />
-    <Compile Include="Items\Weapons\Magic\EarthWand.cs" />
+    <Compile Include="Items\Weapons\Magic\StoneWand.cs" />
     <Compile Include="Items\Weapons\Magic\ElementalWand.cs" />
     <Compile Include="Items\Weapons\Magic\FireWand.cs" />
     <Compile Include="Items\Weapons\Magic\IceWand.cs" />
@@ -73,6 +73,8 @@
     <Compile Include="Items\Weapons\Ranged\ScopedRifle.cs" />
     <Compile Include="Items\Weapons\Ranged\ShadowThorn.cs" />
     <Compile Include="NPCs\WolfsGlobalNPC.cs" />
+    <Compile Include="Projectiles\StoneProjectile.cs" />
+    <Compile Include="Projectiles\IceShardProj.cs" />
     <Compile Include="Projectiles\IceProjectile.cs" />
     <Compile Include="Projectiles\AirProjectile.cs" />
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
