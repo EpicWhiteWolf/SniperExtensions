@@ -6,11 +6,11 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Projectiles
 {
-    class AirProjectile : ModProjectile
+    class IceProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Air Blast");
+            DisplayName.SetDefault("Icicle");
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
         }
@@ -26,21 +26,23 @@ namespace WolfsAdditions.Projectiles
             projectile.ignoreWater = true;
             projectile.ranged = true;
             projectile.aiStyle = 0;
-            projectile.hide = true;
             projectile.penetrate = -1;
         }
 
         public override void AI()
         {
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
-            Vector2 randVect = new Vector2(Main.rand.Next(-15, 15), Main.rand.Next(-15, 15));
-            int dustnumber = Dust.NewDust(projectile.position + randVect, projectile.width, projectile.height, mod.DustType("AirDust"), 0f, 0f, 100, default(Color), 1.2f);
-            Main.dust[dustnumber].velocity = projectile.velocity * 0.5f;
         }
 
         public override void Kill(int timeLeft)
         {
+            
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
+        }
+
+        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        {
+            target.AddBuff(mod.BuffType<Buffs.FrostedDebuff>(), 480);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace WolfsAdditions.Items.Accessories
                 + "\nwhen at critical health"
                 + "\nIncreases length of invincibility" 
                 + "\nafter taking damage"
-                + "\nProvides light when equipped"");
+                + "\nProvides light when equipped");
         }
 
         public override void SetDefaults()

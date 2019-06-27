@@ -133,11 +133,11 @@ namespace WolfsAdditions.NPCs
             {
                 if (npc.aiStyle == 1 || npc.aiStyle == 3 || npc.aiStyle == 15 || npc.aiStyle == 19 || npc.aiStyle == 25 || npc.aiStyle == 26 || npc.aiStyle == 38)
                 {
-                    npc.velocity.X *= 0.95f;
+                    npc.velocity.X *= 0.9f;
                 }
                 else
                 {
-                    npc.velocity *= 0.95f;
+                    npc.velocity *= 0.9f;
                 }
             }
         }

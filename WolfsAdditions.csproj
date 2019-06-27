@@ -35,9 +35,11 @@
   <ItemGroup>
     <Compile Include="Buffs\AMG.cs" />
     <Compile Include="Buffs\BoneBoltDebuff.cs" />
+    <Compile Include="Buffs\FrostedDebuff.cs" />
     <Compile Include="Buffs\DeepChillDebuff.cs" />
     <Compile Include="Buffs\LacerationsDebuff.cs" />
     <Compile Include="Buffs\MarkedDebuff.cs" />
+    <Compile Include="Dusts\AirDust.cs" />
     <Compile Include="Items\Accessories\HolyCrossNecklace.cs" />
     <Compile Include="Items\Accessories\HolyGrail.cs" />
     <Compile Include="Items\Accessories\SoulTrueFlight.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="Items\Weapons\Ranged\ScopedRifle.cs" />
     <Compile Include="Items\Weapons\Ranged\ShadowThorn.cs" />
     <Compile Include="NPCs\WolfsGlobalNPC.cs" />
+    <Compile Include="Projectiles\IceProjectile.cs" />
     <Compile Include="Projectiles\AirProjectile.cs" />
     <Compile Include="Projectiles\BoneBoltProjectile.cs" />
     <Compile Include="Projectiles\DeepChillProjectile.cs" />
@@ -110,7 +113,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dusts\" />
     <Folder Include="Items\Weapons\Melee\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

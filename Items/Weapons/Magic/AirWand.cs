@@ -24,13 +24,13 @@ namespace WolfsAdditions.Items.Weapons.Magic
             item.useAnimation = 10;
             item.useStyle = 5;
             item.noMelee = true;
-            item.knockBack = 5;
+            item.knockBack = 3;
             item.value = Item.sellPrice(0, 0, 5, 0);
             item.rare = 1;
             item.UseSound = SoundID.Item8;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("AirProjectile");
-            item.shootSpeed = 16f;
+            item.shootSpeed = 4f;
         }
 
         public override void AddRecipes()

@@ -37,6 +37,13 @@ namespace WolfsAdditions.Projectiles
 
         public override void Kill(int timeLeft)
         {
+            for (int i = 0; i < 8; i++)
+            {
+                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f,
+                    Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
+                Main.projectile[a].timeLeft += Main.rand.Next(240);
+            }
+
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
             Main.PlaySound(SoundID.Item10, projectile.position);
         }
@@ -45,27 +52,6 @@ namespace WolfsAdditions.Projectiles
         {
             projectile.type = mod.ProjectileType("ShroomProjectile");
             return true;
-        }
-
-        public override bool OnTileCollide(Vector2 oldVelocity)
-        {
-            for (int i = 0; i < 8; i++)
-            {
-                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f,
-                    Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
-                Main.projectile[a].timeLeft += Main.rand.Next(240);
-            }
-            return true;
-        }
-
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        {
-            for (int i = 0; i < 8; i++)
-            {
-                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, Main.rand.Next(-10, 10) * .25f,
-                    Main.rand.Next(-10, 10) * .25f, mod.ProjectileType("ShroomSporeProj"), (int)(projectile.damage * 0.1), 1, projectile.owner);
-                Main.projectile[a].timeLeft += Main.rand.Next(240);
-            }
         }
     }
 }
