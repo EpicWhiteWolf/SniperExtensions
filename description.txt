@@ -49,3 +49,5 @@ Please visit the mod homepage,
 I'm always open to feedback and constructive criticism!
 
 Special thanks to all the contributors of ExampleMod
+
+Contributor(s): Naq
