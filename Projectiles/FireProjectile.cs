@@ -6,11 +6,11 @@ using Terraria.ModLoader;
 
 namespace WolfsAdditions.Projectiles
 {
-    class AirProjectile : ModProjectile
+    class FireProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Air Blast");
+            DisplayName.SetDefault("Fire");
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
         }
@@ -19,7 +19,7 @@ namespace WolfsAdditions.Projectiles
         {
             projectile.width = 14;
             projectile.height = 14;
-            projectile.timeLeft = 60;
+            projectile.timeLeft = 80;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
@@ -33,14 +33,20 @@ namespace WolfsAdditions.Projectiles
         public override void AI()
         {
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
-            Vector2 randVect = new Vector2(Main.rand.Next(-15, 15), Main.rand.Next(-15, 15));
-            int dustnumber = Dust.NewDust(projectile.position + randVect, projectile.width, projectile.height, mod.DustType("AirDust"), 0f, 0f, 100, default(Color), 1.2f);
-            Main.dust[dustnumber].velocity = projectile.velocity * 0.5f;
+            Vector2 randVect = new Vector2(Main.rand.Next(-7, 7), Main.rand.Next(-7, 7));
+            int dustnumber = Dust.NewDust(projectile.position + randVect, projectile.width, projectile.height, 6, 0f, 0f, 0, default(Color), 2f);
+            Main.dust[dustnumber].noGravity = true;
+            Main.dust[dustnumber].velocity = projectile.velocity * 0.25f;
+            if (Main.rand.Next(100) == 0)
+            {
+                int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X,
+                    5, mod.ProjectileType("EmberProjectile"), projectile.damage, projectile.knockBack, projectile.owner);
+            }
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
+            target.AddBuff(BuffID.OnFire, 240);
         }
     }
 }

@@ -97,15 +97,11 @@ namespace WolfsAdditions.Items.Weapons.Ranged
             if (player.altFunctionUse == 2)
             {
                 type = mod.ProjectileType("VortexMarkProj");
-                speedX *= 1.2f;
-                speedY *= 1.2f;
             }
 
             else
             {
                 type = mod.ProjectileType("VortexSniperProj");
-                speedX *= 1.6f;
-                speedY *= 1.6f;
             }
             return true;
         }

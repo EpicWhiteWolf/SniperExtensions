@@ -60,8 +60,6 @@ namespace WolfsAdditions.Items.Weapons.Ranged
         {
             Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
             muzzleOffset.Y += -6;
-            speedX *= 1.2f;
-            speedY *= 1.2f;
 
             if (type == ProjectileID.Bullet)
             {

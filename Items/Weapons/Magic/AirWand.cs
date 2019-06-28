@@ -19,8 +19,8 @@ namespace WolfsAdditions.Items.Weapons.Magic
             item.damage = 3;
             item.magic = true;
             item.mana = 2;
-            item.width = 32;
-            item.height = 10;
+            item.width = 20;
+            item.height = 20;
             item.useTime = 10;
             item.useAnimation = 10;
             item.useStyle = 5;

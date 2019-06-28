@@ -16,11 +16,11 @@ namespace WolfsAdditions.Items.Weapons.Magic
 
         public override void SetDefaults()
         {
-            item.damage = 8;
+            item.damage = 5;
             item.magic = true;
-            item.mana = 4;
-            item.width = 32;
-            item.height = 10;
+            item.mana = 3;
+            item.width = 20;
+            item.height = 20;
             item.useTime = 7;
             item.useAnimation = 7;
             item.useStyle = 5;

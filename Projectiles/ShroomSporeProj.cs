@@ -23,7 +23,7 @@ namespace WolfsAdditions.Projectiles
             projectile.timeLeft = 240;
             projectile.friendly = true;
             projectile.hostile = false;
-            projectile.tileCollide = false;
+            projectile.tileCollide = true;
             projectile.ignoreWater = true;
             projectile.ranged = true;
             projectile.aiStyle = 0;
@@ -44,6 +44,19 @@ namespace WolfsAdditions.Projectiles
                     projectile.frame = 0;
                 }
             }
+        }
+
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            if (projectile.velocity.X != oldVelocity.X)
+            {
+                projectile.velocity.X = -oldVelocity.X;
+            }
+            if (projectile.velocity.Y != oldVelocity.Y)
+            {
+                projectile.velocity.Y = -oldVelocity.Y;
+            }
+            return false;
         }
     }
 }

@@ -55,8 +55,6 @@ namespace WolfsAdditions.Items.Weapons.Ranged
         {
             Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
             muzzleOffset.Y += 0;
-            speedX *= 1.6f;
-            speedY *= 1.6f;
 
             if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
             {
