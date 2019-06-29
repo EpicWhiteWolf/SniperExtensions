@@ -28,6 +28,11 @@ namespace WolfsAdditions.Projectiles
             projectile.aiStyle = 0;
         }
 
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return new Color(0.4f, 0.4f, 0.4f, 1f);
+        }
+
         public override void AI()
         {
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);

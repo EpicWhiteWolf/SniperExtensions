@@ -73,6 +73,7 @@
     <Compile Include="Items\Weapons\Ranged\ScopedRifle.cs" />
     <Compile Include="Items\Weapons\Ranged\ShadowThorn.cs" />
     <Compile Include="NPCs\WolfsGlobalNPC.cs" />
+    <Compile Include="Projectiles\ElementalProj.cs" />
     <Compile Include="Projectiles\EmberProjectile.cs" />
     <Compile Include="Projectiles\FireProjectile.cs" />
     <Compile Include="Projectiles\StoneProjectile.cs" />

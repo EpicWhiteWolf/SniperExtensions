@@ -35,14 +35,13 @@ namespace WolfsAdditions.Projectiles
             Color glow = new Color(1f, 1f, 1f, 1f);
             GetAlpha(glow);
             projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
+            int dustnumber = Dust.NewDust(projectile.position, projectile.width, projectile.height, 67, 0f, 0f, 100, default(Color), 1.2f);
+            Main.dust[dustnumber].noGravity = true;
         }
 
         public override void Kill(int timeLeft)
         {
-            for (int d = 0; d < 3; d++)
-            {
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, 67, 0f, 0f, 100, default(Color), 1.2f);
-            }
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, 67, 0f, 0f, 100, default(Color), 1.2f);
             Main.PlaySound(SoundID.Item27, projectile.position);
             Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
         }
