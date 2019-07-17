@@ -17,14 +17,14 @@ namespace WolfsAdditions.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 14;
-            projectile.height = 14;
+            projectile.width = 8;
+            projectile.height = 8;
             projectile.timeLeft = 30;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
             projectile.ignoreWater = true;
-            projectile.ranged = true;
+            projectile.magic = true;
             projectile.aiStyle = 0;
         }
 
@@ -42,7 +42,6 @@ namespace WolfsAdditions.Projectiles
         {
             Dust.NewDust(projectile.position, projectile.width, projectile.height, 67, 0f, 0f, 100, default(Color), 1.2f);
             Main.PlaySound(SoundID.Item27, projectile.position);
-            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
         }
 
         public override bool PreKill(int timeLeft)
@@ -58,6 +57,12 @@ namespace WolfsAdditions.Projectiles
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
             target.AddBuff(mod.BuffType<Buffs.FrostedDebuff>(), 480);
+        }
+
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
+            return true;
         }
     }
 }

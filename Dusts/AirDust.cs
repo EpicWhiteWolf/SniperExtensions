@@ -22,6 +22,13 @@ namespace WolfsAdditions.Dusts
             {
                 dust.active = false;
             }
+            /*
+            if (Collision.SolidCollision(dust.position - Vector2.One * 5f, 10, 10))
+            {
+                dust.scale *= 0.9f;
+                dust.velocity = new Vector2(0, 0);
+            }
+            */
             return false;
         }
     }

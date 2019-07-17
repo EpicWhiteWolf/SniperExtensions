@@ -21,7 +21,7 @@ namespace WolfsAdditions.Items.Accessories
         {
             item.width = 30;
             item.height = 30;
-            item.value = 10000;
+            item.value = Item.sellPrice(0, 0, 0, 0);
             item.rare = 4;
             item.accessory = true;
         }
@@ -38,10 +38,7 @@ namespace WolfsAdditions.Items.Accessories
                 Lighting.AddLight(player.Center, 1f, 1f, 0.75f);
             }
 
-            if (player.statLife <= (float)player.statLifeMax2 * 0.25f)
-            {
-                player.endurance = 0.98f * (1 - (player.statLife / ((float)player.statLifeMax2 * 0.25f)));
-            }
+            player.endurance += 0.71f * (1 - (player.statLife / ((float)player.statLifeMax2)));
         }
     }
 }

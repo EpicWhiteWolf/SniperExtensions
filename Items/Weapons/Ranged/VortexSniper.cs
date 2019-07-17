@@ -69,18 +69,23 @@ namespace WolfsAdditions.Items.Weapons.Ranged
         {
             if (player.altFunctionUse == 2)
             {
-                item.useTime = 10;
-                item.useAnimation = 10;
                 item.UseSound = SoundID.Item12;
-
             }
+
             else
             {
-                item.useTime = 60;
-                item.useAnimation = 60;
                 item.UseSound = SoundID.Item11;
             }
             return base.CanUseItem(player);
+        }
+
+        public override float UseTimeMultiplier(Player player)
+        {
+            if (player.altFunctionUse == 2)
+            {
+                return 6f;
+            }
+            return 1;
         }
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)

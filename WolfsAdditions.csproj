@@ -1,127 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\references\tModLoader.targets" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8298EAB6-0586-4BDA-9483-83624B66B13A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WolfsAdditions</RootNamespace>
-    <AssemblyName>SniperExtensions</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyName>WolfsAdditions</AssemblyName>
+    <TargetFramework>net45</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+  <Target Name="BuildMod" AfterTargets="Build">
+    <Exec Command="&quot;$(tMLBuildServerPath)&quot; -build $(ProjectDir) -eac $(TargetPath) -define $(DefineConstants) -unsafe $(AllowUnsafeBlocks)" />
+  </Target>
   <ItemGroup>
-    <Compile Include="Buffs\AMG.cs" />
-    <Compile Include="Buffs\BoneBoltDebuff.cs" />
-    <Compile Include="Buffs\FrostedDebuff.cs" />
-    <Compile Include="Buffs\DeepChillDebuff.cs" />
-    <Compile Include="Buffs\LacerationsDebuff.cs" />
-    <Compile Include="Buffs\MarkedDebuff.cs" />
-    <Compile Include="Dusts\AirDust.cs" />
-    <Compile Include="Items\Accessories\HolyCrossNecklace.cs" />
-    <Compile Include="Items\Accessories\HolyGrail.cs" />
-    <Compile Include="Items\Accessories\SoulTrueFlight.cs" />
-    <Compile Include="Items\Ammo\BoneBolt.cs" />
-    <Compile Include="Items\Ammo\Rebar.cs" />
-    <Compile Include="Items\Armor\FossilLeggings.cs" />
-    <Compile Include="Items\Armor\FossilPlatemail.cs" />
-    <Compile Include="Items\Armor\FossilMask.cs" />
-    <Compile Include="Items\Armor\MoltenJacket.cs" />
-    <Compile Include="Items\Armor\MoltenHelm.cs" />
-    <Compile Include="Items\Armor\MoltenLeggings.cs" />
-    <Compile Include="Items\Armor\GhillieJacket.cs" />
-    <Compile Include="Items\Armor\GhillieHood.cs" />
-    <Compile Include="Items\Armor\GhilliePants.cs" />
-    <Compile Include="Items\Crafting\AncientArtifact.cs" />
-    <Compile Include="Items\Accessories\ArchitectsMiningGear.cs" />
-    <Compile Include="Items\Weapons\Magic\AirWand.cs" />
-    <Compile Include="Items\Weapons\Magic\StoneWand.cs" />
-    <Compile Include="Items\Weapons\Magic\ElementalWand.cs" />
-    <Compile Include="Items\Weapons\Magic\FireWand.cs" />
-    <Compile Include="Items\Weapons\Magic\IceWand.cs" />
-    <Compile Include="Items\Weapons\Ranged\ChlorophyteSniper.cs" />
-    <Compile Include="Items\Weapons\Ranged\Dawnbreaker.cs" />
-    <Compile Include="Items\Weapons\Ranged\FrostSniper.cs" />
-    <Compile Include="Items\Weapons\Ranged\ShroomiteSniper.cs" />
-    <Compile Include="Items\Weapons\Ranged\VortexSniper.cs" />
-    <Compile Include="Items\Weapons\Ranged\DaedelusGunbow.cs" />
-    <Compile Include="Items\Weapons\Ranged\FossilBoltPuncher.cs" />
-    <Compile Include="Items\Weapons\Ranged\LacerationRifle.cs" />
-    <Compile Include="Items\Weapons\Ranged\MoltenSniper.cs" />
-    <Compile Include="Items\Weapons\Ranged\ScopedRifle.cs" />
-    <Compile Include="Items\Weapons\Ranged\ShadowThorn.cs" />
-    <Compile Include="NPCs\WolfsGlobalNPC.cs" />
-    <Compile Include="Projectiles\ElementalProj.cs" />
-    <Compile Include="Projectiles\EmberProjectile.cs" />
-    <Compile Include="Projectiles\FireProjectile.cs" />
-    <Compile Include="Projectiles\StoneProjectile.cs" />
-    <Compile Include="Projectiles\IceShardProj.cs" />
-    <Compile Include="Projectiles\IceProjectile.cs" />
-    <Compile Include="Projectiles\AirProjectile.cs" />
-    <Compile Include="Projectiles\BoneBoltProjectile.cs" />
-    <Compile Include="Projectiles\DeepChillProjectile.cs" />
-    <Compile Include="Projectiles\LacerationProjectile.cs" />
-    <Compile Include="Projectiles\RebarProjectile.cs" />
-    <Compile Include="Projectiles\ShadowThornProjectile.cs" />
-    <Compile Include="Projectiles\ShroomProjectile.cs" />
-    <Compile Include="Projectiles\ShroomSporeProj.cs" />
-    <Compile Include="Projectiles\VortexMarkProj.cs" />
-    <Compile Include="Projectiles\VortexSniperProj.cs" />
-    <Compile Include="WolfsAdditions.cs" />
-    <Compile Include="WolfsPlayer.cs" />
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+    <None Remove="Buffs\Thumbs.db" />
+    <None Remove="Dusts\Thumbs.db" />
+    <None Remove="Items\Accessories\Thumbs.db" />
+    <None Remove="Items\Ammo\Thumbs.db" />
+    <None Remove="Items\Armor\Thumbs.db" />
+    <None Remove="Items\Thumbs.db" />
+    <None Remove="Items\Weapons\Magic\Thumbs.db" />
+    <None Remove="Items\Weapons\Melee\Thumbs.db" />
+    <None Remove="Items\Weapons\Ranged\Thumbs.db" />
+    <None Remove="Items\Weapons\Thumbs.db" />
+    <None Remove="Projectiles\Thumbs.db" />
+    <None Remove="ReLogicWindows.dll" />
+    <None Remove="Thumbs.db" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Game\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Game.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
-    </Reference>
-    <Reference Include="ReLogicWindows">
-      <HintPath>..\..\..\..\..\..\Desktop\Modding\Terraria\Terraria Decomp\ReLogicWindows.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="Terraria">
-      <HintPath>..\..\..\..\..\..\Desktop\Terraria\Modded\Terraria.exe</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Items\Weapons\Melee\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
-  </PropertyGroup>
 </Project>

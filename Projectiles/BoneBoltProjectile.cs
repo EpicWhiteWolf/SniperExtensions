@@ -17,8 +17,8 @@ namespace WolfsAdditions.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 24;
-            projectile.height = 18;
+            projectile.width = 10;
+            projectile.height = 10;
             projectile.timeLeft = 960;
             projectile.penetrate = 3;
             projectile.friendly = true;

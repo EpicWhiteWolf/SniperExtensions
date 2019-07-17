@@ -75,6 +75,11 @@ namespace WolfsAdditions.NPCs
 
         public override void NPCLoot(NPC npc)
         {
+            if (npc.type == NPCID.EyeofCthulhu && !Main.expertMode)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BladeOfCthulhu")); ;
+            }
+
             if (npc.type == NPCID.Mimic)
             {
                 if (Main.rand.NextBool(7))

@@ -17,14 +17,14 @@ namespace WolfsAdditions.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 6;
-            projectile.height = 6;
+            projectile.width = 8;
+            projectile.height = 8;
             projectile.timeLeft = 240;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
             projectile.ignoreWater = true;
-            projectile.ranged = true;
+            projectile.magic = true;
             projectile.aiStyle = 0;
             projectile.hide = true;
             projectile.penetrate = -1;

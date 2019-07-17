@@ -17,14 +17,14 @@ namespace WolfsAdditions.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 14;
-            projectile.height = 14;
+            projectile.width = 8;
+            projectile.height = 8;
             projectile.timeLeft = 960;
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
-            projectile.ignoreWater = true;
-            projectile.ranged = true;
+            projectile.ignoreWater = false;
+            projectile.magic = true;
             projectile.aiStyle = 0;
         }
 
@@ -39,13 +39,9 @@ namespace WolfsAdditions.Projectiles
             Vector2 randVect = new Vector2(Main.rand.Next(-15, 15), Main.rand.Next(-15, 15));
         }
 
-        public override void Kill(int timeLeft)
-        {
-            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
-        }
-
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
+            Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
             Main.PlaySound(SoundID.Item10, projectile.position);
             return true;
         }

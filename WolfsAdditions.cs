@@ -74,5 +74,10 @@ namespace WolfsAdditions
             recipe.SetResult(ItemID.SlimeStaff);
             recipe.AddRecipe();
         }
+
+        public override void PostAddRecipes()
+        {
+            base.PostAddRecipes();
+        }
     }
 }

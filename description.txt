@@ -9,9 +9,8 @@ List of Added Items(in progressional order):
 -Magic Items
 	1.Wand of Air(hint: Bottle)
 	2.Wand of Ice(hint: Ice Block)
-	3.Wand of Stone
-	4.
-	5.
+	3.Wand of Stone(hint: Stone Block)
+	4.Wand of Fire(hint: Torch)
 -Ranged Items
 	1.Scoped Rifle(hint: Iron Bar)
 	2.Ghillie Armor(hint: Living Leaf Wall)
@@ -44,6 +43,7 @@ List of Added Items(in progressional order):
 	7.Flying Carpet(hint: Silk)
 	8.Slime Staff(hint: Slime Block)
 	9.Frozen Turtle Shell(hint: Frost Core)
+	10-22.Potion Accessories(hint: Philosopher's Stone)
 
 Please visit the mod homepage,
 I'm always open to feedback and constructive criticism!

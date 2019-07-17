@@ -24,7 +24,7 @@ namespace WolfsAdditions.Projectiles
             projectile.hostile = false;
             projectile.tileCollide = true;
             projectile.ignoreWater = false;
-            projectile.ranged = true;
+            projectile.magic = true;
             projectile.aiStyle = 0;
             projectile.hide = true;
             projectile.penetrate = -1;

@@ -23,11 +23,9 @@ namespace WolfsAdditions.Projectiles
             projectile.friendly = true;
             projectile.hostile = false;
             projectile.tileCollide = true;
-            projectile.ignoreWater = true;
-            projectile.ranged = true;
+            projectile.ignoreWater = false;
+            projectile.magic = true;
             projectile.aiStyle = 0;
-            projectile.hide = true;
-            projectile.penetrate = -1;
         }
 
         public override void AI()

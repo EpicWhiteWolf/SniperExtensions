@@ -17,8 +17,8 @@ namespace WolfsAdditions.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 16;
-            projectile.height = 16;
+            projectile.width = 14;
+            projectile.height = 14;
             projectile.penetrate = -1;
             projectile.timeLeft = 240;
             projectile.friendly = true;
@@ -27,6 +27,7 @@ namespace WolfsAdditions.Projectiles
             projectile.ignoreWater = true;
             projectile.ranged = true;
             projectile.aiStyle = 0;
+            drawOriginOffsetY = -4;
         }
 
         public override void AI()
